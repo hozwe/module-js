@@ -9,13 +9,13 @@ function initListEditor() {
     // We add the click handler to the UL list itself. We'll figure out
     // later on in the event handler which LI tag was actually clicked on.
     // This saves us from having to add click handlers to EVERY LI tag in the list!
-    com_joemarini.EVENTS.addEventHandler(gTheList, "click", itemClick);
-    com_joemarini.EVENTS.addEventHandler(document.getElementById('btnAdd'), "click", function() { addNewItem(); }, false);
+    cto_hozwe.EVENTS.addEventHandler(gTheList, "click", itemClick);
+    cto_hozwe.EVENTS.addEventHandler(document.getElementById('btnAdd'), "click", function() { addNewItem(); }, false);
 }
 
 // The user clicked on the UL. Now figure out which LI tag was clicked.
 function itemClick(evt) {
-    var oTarget = com_joemarini.EVENTS.getEventTarget(evt);
+    var oTarget = cto_hozwe.EVENTS.getEventTarget(evt);
 
     // if the event target was a text node, figure out its parent LI tag
     if (oTarget.nodeType == TEXTNODE) // "3" means text node. 
@@ -83,19 +83,19 @@ function editListItem(oLIItem) {
     oBtnOK.setAttribute("type", "button");
     oBtnOK.setAttribute("value", "  Change  ");
     oBtnOK.className = "formButton";
-    com_joemarini.EVENTS.addEventHandler(oBtnOK, "click", commitEdit);
+    cto_hozwe.EVENTS.addEventHandler(oBtnOK, "click", commitEdit);
 
     var oBtnCancel = document.createElement("input");
     oBtnCancel.setAttribute("type", "button");
     oBtnCancel.setAttribute("value", "  Cancel  ");
     oBtnCancel.className = "formButton";
-    com_joemarini.EVENTS.addEventHandler(oBtnCancel, "click", cancelEdit);
+    cto_hozwe.EVENTS.addEventHandler(oBtnCancel, "click", cancelEdit);
 
     var oBtnDEL = document.createElement("input");
     oBtnDEL.setAttribute("type", "button");
     oBtnDEL.setAttribute("value", "  Delete  ");
     oBtnDEL.className = "formButton";
-    com_joemarini.EVENTS.addEventHandler(oBtnDEL, "click", deleteItem);
+    cto_hozwe.EVENTS.addEventHandler(oBtnDEL, "click", deleteItem);
 
     // add these buttons to the new, temporary list item
     oLIItem.appendChild(oBtnOK);
@@ -134,4 +134,4 @@ function cancelEdit(evt) {
     oTextField.parentNode.innerHTML = gOldContent;
 }
 
-com_joemarini.EVENTS.addEventHandler(window, "load", function() { initListEditor(); }, false);
+cto_hozwe.EVENTS.addEventHandler(window, "load", function() { initListEditor(); }, false);
