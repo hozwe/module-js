@@ -1,0 +1,29 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Editing Page Content In-Place</title>
+<style type="text/css">
+.formButton {
+	margin-left:8px;
+}
+</style>
+<script type="text/javascript" src="../com_joemarini.js"></script>
+<script type="text/javascript" src="ListEditing.js"></script>
+</head>
+<body>
+<h1>In-Place Content Editing</h1>
+<p>This  example shows how user interface elements in a form can be created
+  dynamically and used to edit the contents of a regular HTML list construct.
+  Items can be added, deleted, and modified on-the-fly. The code is cross-browser,
+  and works in IE 5.5 and later, Firefox 1.0+, and Mozilla 6 and later.</p>
+  <p>Click on an item in the list to invoke the UI for editing and deleting items.</p>
+
+<form action="" method="post" name="form1" style="border:1px silver solid;padding:5">
+	<input id="btnAdd" class="formButton" type="button" name="Button" value="Add New List Item" />
+	<ul id="theList">
+		<li>New Item</li>
+	</ul>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>
